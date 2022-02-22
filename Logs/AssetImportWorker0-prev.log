@@ -15,11 +15,11 @@ C:/Users/Admin/Documents/GitHub/Endless Runner
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63360
+62497
 Successfully changed project path to: C:/Users/Admin/Documents/GitHub/Endless Runner
 C:/Users/Admin/Documents/GitHub/Endless Runner
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 342.55 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 75.06 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.7f1 (dd97f2c94397)
 [Subsystems] Discovering subsystems at path D:/VSCode/2020.3.7f1/Editor/Data/Resources/UnitySubsystems
@@ -35,5 +35,5 @@ Initialize mono
 Mono path[0] = 'D:/VSCode/2020.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'D:/VSCode/2020.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/VSCode/2020.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56304
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56384
 Begin MonoManager ReloadAssembly

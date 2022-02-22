@@ -20,11 +20,8 @@ public class PlayerController : MonoBehaviour
     private float JumpTimeCounter;
 
     private bool stoppedJumping;
-
     public bool isDashing;
-
-    private float dashTime;
-    public float startDashTime;
+    public Transform dashPos;
     
     private int direction;
 
@@ -126,8 +123,7 @@ public class PlayerController : MonoBehaviour
             if(theScoreManager.currentGauge == theScoreManager.maxGauge)
             {
                 PowerDash();
-            }
-            
+            }  
         }
         if(grounded)
         {
@@ -155,11 +151,11 @@ public class PlayerController : MonoBehaviour
         theScoreManager.currentGauge = 0;
         theScoreManager.SetGauge(0);
         // theScoreManager.GetComponent<ScoreManager>().SetGauge(0);
-        initialGravityScale = 0.0000001f;
+        initialGravityScale = 0.000001f;
+        myRigidbody2D.isKinematic = true;
         myRigidbody2D.velocity = new Vector2(myRigidbody2D.velocity.x, 0);
-        
         isDashing = true;
-        moveSpeed = moveSpeed * 2.2f;
+        moveSpeed = moveSpeed * 2f;
         myAnimator.SetBool("isDashing", isDashing);
         StartCoroutine("StopDashing");
         
@@ -167,10 +163,10 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator StopDashing()
     {
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(1f);
+        myRigidbody2D.isKinematic = false;
         isDashing = false;
-        moveSpeed = moveSpeed / 2.2f;
+        moveSpeed = moveSpeed / 2f;
         initialGravityScale = 2;
-        
     }
 }
